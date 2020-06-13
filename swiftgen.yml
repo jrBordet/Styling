@@ -1,0 +1,11 @@
+strings:
+    inputs: AppTheme/Resources/en.lproj/Localizable.strings
+    outputs:
+      templateName: structured-swift4
+      output: AppTheme/Resources/Localizable.swift
+
+colors:
+    inputs: AppTheme/Resources/Colors.json
+    outputs:
+      templateName: swift4
+      output: AppTheme/Resources/Colors.swift

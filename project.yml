@@ -1,0 +1,32 @@
+name: AppTheme
+options: # Some general settings for the project
+    bundleIdPrefix: com.apptheme
+    createIntermediateGroups: true # If the folders are nested, also nest the groups in Xcode
+#    indentWidth: 2 # indent by 2 spaces
+#    tabWidth: 2 # a tab is 2 spaces
+settings:
+    DEVELOPMENT_TEAM: None
+targets:
+  AppTheme:
+    type: application
+    platform: iOS
+    deploymentTarget: 10.0
+    sources:
+        - path: AppTheme
+    dependencies:
+        - target: Styling
+  AppThemeTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: 10.0
+    sources:
+        - path: AppThemeTests
+    dependencies:
+        - target: AppTheme
+  # Styling pod library
+  Styling:
+    type: framework
+    platform: iOS
+    deploymentTarget: 10.0
+    sources:
+        - path: Styling

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  XcodegenApp
+
+  Created by Jean Raphael Bordet on 28/05/2020.
+  
+*/
+
+"app.name" = "XcodegenApp - en";
+"tabbar.title.home" = "Home";
+"tabbar.title.some" = "Some label";
+

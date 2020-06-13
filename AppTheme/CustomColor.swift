@@ -11,7 +11,7 @@ import CoreGraphics
 /**
  *  Represents a color value type
  */
-public struct Color {
+public struct CustomColor {
     
     /// Represents the underlying RGBA values
     public var rgba: RGBA
@@ -43,12 +43,12 @@ public struct Color {
      
      - returns: A new color value
      */
-    public func with(alpha: Float) -> Color {
-        return Color(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: alpha)
+    public func with(alpha: Float) -> CustomColor {
+        return CustomColor(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: alpha)
     }
 }
 
-extension Color {
+extension CustomColor {
     
     /**
      Initializes this color value with literal component values. e.g. (100, 50, 20, 1.0)
@@ -75,7 +75,7 @@ extension Color {
     
 }
 
-extension Color {
+extension CustomColor {
     
     /**
      Initializes this color value for the associated hex code (e.g. 0xfff, 0xfff0, 0xfff000, 0xfff000ff)
@@ -135,13 +135,13 @@ extension Color {
     
 }
 
-extension Color: Equatable {
-    public static func ==(lhs: Color, rhs: Color) -> Bool {
+extension CustomColor: Equatable {
+    public static func ==(lhs: CustomColor, rhs: CustomColor) -> Bool {
         return lhs.rgba == rhs.rgba
     }
 }
 
-extension Color {
+extension CustomColor {
     
     /**
      Initializes this color value with the specified white value
@@ -189,7 +189,7 @@ extension Color {
     
 }
 
-extension Color {
+extension CustomColor {
     
     /// Returns true if the color is considered visually dark. False otherwise
     public var isDark: Bool {
@@ -201,33 +201,33 @@ extension Color {
      
      - returns: A color that is the inverse of this color. e.g. white -> black
      */
-    public func inverted() -> Color {
-        return Color(red: 1 - rgba.red, green: 1 - rgba.green, blue: 1 - rgba.blue, alpha: rgba.alpha)
+    public func inverted() -> CustomColor {
+        return CustomColor(red: 1 - rgba.red, green: 1 - rgba.green, blue: 1 - rgba.blue, alpha: rgba.alpha)
     }
     
 }
 
-extension Color {
+extension CustomColor {
     
-    public static var black: Color { return Color(white: 0) }
-    public static var darkGray: Color { return Color(white: 0.333) }
-    public static var lightGray: Color { return Color(white: 0.667) }
-    public static var white: Color { return Color(white: 1) }
-    public static var gray: Color { return Color(white: 0.5) }
-    public static var red: Color { return Color(red: 1, green: 0, blue: 0) }
-    public static var green: Color { return Color(red: 0, green: 1, blue: 0) }
-    public static var blue: Color { return Color(red: 0, green: 0, blue: 1) }
-    public static var cyan: Color { return Color(red: 0, green: 1, blue: 1) }
-    public static var yellow: Color { return Color(red: 1, green: 1, blue: 0) }
-    public static var magenta: Color { return Color(red: 1, green: 0, blue: 1) }
-    public static var orange: Color { return Color(red: 1, green: 0.5, blue: 0) }
-    public static var purple: Color { return Color(red: 0.5, green: 0, blue: 0.5) }
-    public static var brown: Color { return Color(red: 0.6, green: 0.4, blue: 0.2) }
-    public static var clear: Color { return Color(white: 0, alpha: 0) }
+    public static var black: CustomColor { return CustomColor(white: 0) }
+    public static var darkGray: CustomColor { return CustomColor(white: 0.333) }
+    public static var lightGray: CustomColor { return CustomColor(white: 0.667) }
+    public static var white: CustomColor { return CustomColor(white: 1) }
+    public static var gray: CustomColor { return CustomColor(white: 0.5) }
+    public static var red: CustomColor { return CustomColor(red: 1, green: 0, blue: 0) }
+    public static var green: CustomColor { return CustomColor(red: 0, green: 1, blue: 0) }
+    public static var blue: CustomColor { return CustomColor(red: 0, green: 0, blue: 1) }
+    public static var cyan: CustomColor { return CustomColor(red: 0, green: 1, blue: 1) }
+    public static var yellow: CustomColor { return CustomColor(red: 1, green: 1, blue: 0) }
+    public static var magenta: CustomColor { return CustomColor(red: 1, green: 0, blue: 1) }
+    public static var orange: CustomColor { return CustomColor(red: 1, green: 0.5, blue: 0) }
+    public static var purple: CustomColor { return CustomColor(red: 0.5, green: 0, blue: 0.5) }
+    public static var brown: CustomColor { return CustomColor(red: 0.6, green: 0.4, blue: 0.2) }
+    public static var clear: CustomColor { return CustomColor(white: 0, alpha: 0) }
     
 }
 
-extension Color: CustomStringConvertible {
+extension CustomColor: CustomStringConvertible {
     
     /// Returns a debug friendly description of this color. The string contains both a relative and literal representation as well as the associated hexValue
     public var description: String {
@@ -237,7 +237,7 @@ extension Color: CustomStringConvertible {
     
 }
 
-extension Color: ExpressibleByStringLiteral {
+extension CustomColor: ExpressibleByStringLiteral {
     
     public init(extendedGraphemeClusterLiteral value: String) {
         self.init(hex: value)!
@@ -253,7 +253,7 @@ extension Color: ExpressibleByStringLiteral {
     
 }
 
-extension Color: Codable {
+extension CustomColor: Codable {
     
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
@@ -276,7 +276,7 @@ extension Color: Codable {
 
 #if os(iOS)
     import UIKit
-    extension Color {
+    extension CustomColor {
         public init?(systemColor: UIColor?) {
             guard let systemColor = systemColor else { return nil }
             self.init(cgColor: systemColor.cgColor)

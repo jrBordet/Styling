@@ -29,55 +29,55 @@ extension UIColor {
     // The color displayed most frequently across your app’s screens and components.
     public static var primaryColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#6200EE")?.systemColor ?? .black,
-            dark: Color(hex: "#6200EE")?.inverted().systemColor ?? .black
+            light: CustomColor(hex: "#6200EE")?.systemColor ?? .black,
+            dark: CustomColor(hex: "#6200EE")?.inverted().systemColor ?? .black
         )
     }
     
     // A light or dark variation of the primary color.
     public static var primaryColorVariant: UIColor {
         UIColor.color(
-            light: Color(hex: "#3700B3")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#3700B3")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#3700B3")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#3700B3")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     // Provides ways to accent and distinguish your product. Floating action buttons use the secondary color.
     public static var secondaryColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#03DAC6")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#03DAC6")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#03DAC6")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#03DAC6")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     public static var secondaryColorVariant: UIColor {
         UIColor.color(
-            light: Color(hex: "#018786")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#018786")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#018786")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#018786")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     // The indication of errors within components such as text fields.
     public static var errorColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#b00200")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#b00200")?.systemColor ?? UIColor.black
+            light: CustomColor(hex: "#b00200")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#b00200")?.systemColor ?? UIColor.black
         )
     }
     
     // Typically maps to the background of components such as cards, sheets, and dialogs.
     public static var surfaceColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#eee")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#eee")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#eee")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#eee")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     // Typically found behind scrollable content.
     public static var backgroundColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#c9c9c9")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#c9c9c9")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#c9c9c9")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#c9c9c9")?.inverted().systemColor ?? UIColor.black
         )
     }
     
@@ -86,40 +86,40 @@ extension UIColor {
     // Text/iconography drawn on top of primaryColor.
     public static var onPrimaryColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#FFFFFF")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#FFFFFF")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#FFFFFF")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#FFFFFF")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     // Text/iconography drawn on top of secondaryColor.
     public static var onSecondaryColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#000000")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#000000")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#000000")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#000000")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     // Text/iconography drawn on top of errorColor.
     public static var onErrorColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#FFF")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#FFF")?.systemColor ?? UIColor.black
+            light: CustomColor(hex: "#FFF")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#FFF")?.systemColor ?? UIColor.black
         )
     }
     
     // Text/iconography drawn on top of surfaceColor.
     public static var onSurfaceColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#000000")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#000000")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#000000")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#000000")?.inverted().systemColor ?? UIColor.black
         )
     }
     
     // Text/iconography drawn on top of backgroundColor.
     public static var onBackgroundColor: UIColor {
         UIColor.color(
-            light: Color(hex: "#000000")?.systemColor ?? UIColor.black,
-            dark: Color(hex: "#000000")?.inverted().systemColor ?? UIColor.black
+            light: CustomColor(hex: "#000000")?.systemColor ?? UIColor.black,
+            dark: CustomColor(hex: "#000000")?.inverted().systemColor ?? UIColor.black
         )
     }
 }
