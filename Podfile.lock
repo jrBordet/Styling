@@ -1,16 +1,20 @@
 PODS:
+  - Caprice (0.0.1)
   - SceneBuilder (1.0.0)
 
 DEPENDENCIES:
+  - Caprice (= 0.0.1)
   - SceneBuilder (= 1.0.0)
 
 SPEC REPOS:
-  https://github.com/jrBordet/RxFramework.podspec.git:
+  https://github.com/jrBordet/Sources.git:
+    - Caprice
     - SceneBuilder
 
 SPEC CHECKSUMS:
+  Caprice: 14d6b90fb0f22ca074c348fad75a72de1f8966a1
   SceneBuilder: e8beec60660be16524eb651df022f310e7a200aa
 
-PODFILE CHECKSUM: 8378e3f882b3c09edc54913a1542943150e83f43
+PODFILE CHECKSUM: 9a7158dace3ffbe0f6afcd097504d53df3708b38
 
 COCOAPODS: 1.9.1

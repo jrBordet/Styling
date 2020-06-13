@@ -9,6 +9,7 @@
 import UIKit
 import SceneBuilder
 import Styling
+import Caprice
 
 public func backgroundLabel(with color: UIColor) -> LabelStyle { { $0.backgroundColor = color } }
 

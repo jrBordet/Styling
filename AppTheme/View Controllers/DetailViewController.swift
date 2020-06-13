@@ -8,6 +8,7 @@
 
 import UIKit
 import Styling
+import Caprice
 
 class DetailViewController: UIViewController {
     @IBOutlet var mainLabel: UILabel!

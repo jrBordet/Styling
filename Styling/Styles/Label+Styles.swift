@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Caprice
 
 public typealias LabelStyle = (UILabel) -> Void
 

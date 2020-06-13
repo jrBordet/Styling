@@ -7,6 +7,7 @@
 //
 
 import SceneBuilder
+import Caprice
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.makeKeyAndVisible()
         self.window?.backgroundColor = .white
+        
+        func incr(_ x: Int) -> Int {
+            x + 1
+        }
+        
+        let result = 1 |> incr
+        print(result)
         
         return true
     }
